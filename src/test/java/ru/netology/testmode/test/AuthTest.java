@@ -1,7 +1,6 @@
 package ru.netology.testmode.test;
 
 import com.codeborne.selenide.Condition;
-import lombok.Value;
 import lombok.var;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -24,8 +23,5 @@ class AuthTest {
         $("[data-test-id='password'] input").setValue(registeredUser.getPassword());
         $("button.button").click();
         $("h2").shouldHave(Condition.exactText("Личный кабинет")).shouldBe(Condition.visible);
-
-
-
     }
 }
